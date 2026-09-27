@@ -263,7 +263,7 @@
   <script>
     (()=>{
       const frame=document.querySelector('.phone-model-viewer');if(!frame)return;
-      const fallback=()=>{if(!frame.src)frame.src=frame.dataset.fallback};
+      const fallback=()=>{if(frame.dataset.fallbackUsed)return;frame.dataset.fallbackUsed='true';frame.src=frame.dataset.fallback};
       const script=document.createElement('script');script.src='https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js';script.async=true;
       script.onerror=fallback;
       script.onload=()=>{
