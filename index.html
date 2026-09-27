@@ -94,6 +94,9 @@
     @media(max-width:380px){.wrap{width:calc(100% - 22px)}.mobile-whatsapp{font-size:.78rem;padding:0 9px}.brand span{font-size:.79rem}.brand small{font-size:.54rem}.hero h1{font-size:clamp(2.7rem,13vw,3.3rem)}.proof-item{padding-inline:6px}.proof span{font-size:.73rem}.product-grid{grid-template-columns:1fr}.product-media,.product:nth-child(1) .product-media,.product:nth-child(6) .product-media{aspect-ratio:16/9}.product-actions{grid-template-columns:1fr 1fr}.catalog-tools{grid-template-columns:1fr}.search-field{grid-column:auto}.select-field{height:46px}.hero-actions{display:grid}.hero-actions .btn{width:100%}.dialog-media{min-height:190px}}
     .phone-stage{position:relative;width:min(100%,580px);height:min(76vw,650px);min-height:440px;display:grid;place-items:center;perspective:1200px;touch-action:pan-y;isolation:isolate}
     .phone-stage .phone-model-viewer{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:0;background:transparent}
+    .phone-ui-cover{position:absolute;z-index:2;pointer-events:none;background:#fff}
+    .phone-ui-cover-top{left:0;right:0;top:0;height:38px}
+    .phone-ui-cover-controls{right:0;bottom:0;width:78%;height:44px}
     .phone-model-credit{position:absolute;z-index:3;left:50%;bottom:10px;transform:translateX(-50%);width:max-content;max-width:calc(100% - 24px);padding:8px 12px;border:1px solid rgba(35,38,45,.1);border-radius:999px;background:rgba(255,255,255,.9);color:#5c5f66;font-size:.75rem;line-height:1.25;text-align:center;backdrop-filter:blur(12px)}.phone-model-credit a{color:#292b30;text-decoration:underline;text-underline-offset:2px}
     .phone-canvas{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:0;transition:opacity .8s ease;cursor:grab;outline:none;touch-action:none;user-select:none;-webkit-user-select:none;z-index:2}
     .phone-stage.is-ready .phone-canvas{opacity:1}.phone-canvas:active{cursor:grabbing}
@@ -132,7 +135,7 @@
   <main id="conteudo">
     <section class="hero" id="inicio"><div class="wrap hero-grid">
       <div class="hero-copy"><div class="live">iPhones em Lavras, com atendimento transparente</div><h1>Mais Phone<br>Lavras.<br><span class="accent">iPhones.</span></h1><p>Novos e seminovos, procedência explicada com clareza e condições para você escolher com tranquilidade.</p><div class="hero-actions"><a class="btn btn-primary" href="produtos.html">Explorar produtos <span aria-hidden="true">↗</span></a><a class="btn" href="https://wa.me/5535991409447?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Mais%20Phone%20Lavras%20e%20quero%20falar%20com%20a%20equipe." target="_blank" rel="noopener noreferrer">Falar no WhatsApp ↗</a></div><div class="hero-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> Loja física · Rua Chagas Dória, 29 · Lavras-MG</div></div>
-      <div class="hero-visual"><div class="phone-stage" id="phoneStage"><iframe class="phone-model-viewer" data-fallback="https://sketchfab.com/models/87fc1df741384124a8ce0226d2b2058d/embed?autostart=1&amp;autospin=0.12&amp;ui_infos=0&amp;ui_controls=0&amp;ui_watermark=0&amp;ui_stop=0&amp;ui_hint=0&amp;ui_theme=light&amp;transparent=1&amp;camera=0" title="Modelo 3D interativo do iPhone 17 Pro Max por MajdyModels" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe><p class="phone-model-credit">Modelo 3D: <a href="https://sketchfab.com/3d-models/iphone-17-pro-max-87fc1df741384124a8ce0226d2b2058d" target="_blank" rel="noopener noreferrer">MajdyModels</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></p></div></div>
+      <div class="hero-visual"><div class="phone-stage" id="phoneStage"><iframe class="phone-model-viewer" data-fallback="https://sketchfab.com/models/87fc1df741384124a8ce0226d2b2058d/embed?autostart=1&amp;autospin=0.12&amp;ui_infos=0&amp;ui_controls=0&amp;ui_watermark=0&amp;ui_stop=0&amp;ui_hint=0&amp;ui_theme=light&amp;transparent=1&amp;camera=0" title="Modelo 3D interativo do iPhone 17 Pro Max por MajdyModels" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe><span class="phone-ui-cover phone-ui-cover-top" aria-hidden="true"></span><span class="phone-ui-cover phone-ui-cover-controls" aria-hidden="true"></span><p class="phone-model-credit">Modelo 3D: <a href="https://sketchfab.com/3d-models/iphone-17-pro-max-87fc1df741384124a8ce0226d2b2058d" target="_blank" rel="noopener noreferrer">MajdyModels</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></p></div></div>
     </div></section>
     <section class="proof" aria-label="Condições e atendimento"><div class="wrap proof-grid"><div class="proof-item"><strong>18x</strong><span>opções no cartão</span></div><div class="proof-item"><strong>36x</strong><span>opções no boleto</span></div><div class="proof-item"><svg class="apple-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" role="img" aria-label="Atendimento seguro"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg><span>informação clara e atendimento próximo</span></div></div></section>
     <section class="section" id="sobre"><div class="wrap"><span class="eyebrow">Mais Phone Lavras</span><h2 class="section-title">Comprar com clareza <span class="accent">faz diferença.</span></h2><p class="section-copy">Facilitamos seu acesso ao ecossistema Apple com orientação honesta, condições explicadas e atendimento próximo em Lavras.</p><div class="benefits">
@@ -273,13 +276,13 @@
           autostart:1,autospin:.12,camera:0,dnt:1,scrollwheel:0,transparent:1,
           ui_infos:0,ui_controls:0,ui_watermark:0,ui_stop:0,ui_hint:0,ui_theme:'light',
           success(api){
-            api.start();
             api.addEventListener('viewerready',()=>api.getCameraLookAt((error,camera)=>{
               if(error||!camera)return;
               const target=camera.target,position=camera.position,zoomOut=1.55;
               const distant=position.map((value,index)=>target[index]+(value-target[index])*zoomOut);
               api.setCameraLookAt(distant,target,1.4);
             }));
+            api.start();
           },
           error:fallback
         });
