@@ -255,31 +255,6 @@
     document.querySelectorAll('a[target="_blank"]').forEach(link=>link.rel='noopener noreferrer');
   </script>
   
-  <script>
-    (()=>{
-      const frame=document.querySelector('.phone-model-viewer');if(!frame)return;
-      const fallback=()=>{if(frame.dataset.fallbackUsed)return;frame.dataset.fallbackUsed='true';frame.src=frame.dataset.fallback};
-      const script=document.createElement('script');script.src='https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js';script.async=true;
-      script.onerror=fallback;
-      script.onload=()=>{
-        if(!window.Sketchfab){fallback();return}
-        const client=new window.Sketchfab('1.12.1',frame);
-        client.init('87fc1df741384124a8ce0226d2b2058d',{
-          autostart:1,autospin:.12,camera:0,dnt:1,scrollwheel:0,transparent:1,
-          ui_infos:0,ui_controls:0,ui_watermark:0,ui_stop:0,ui_hint:0,ui_theme:'light',
-          success(api){
-            api.addEventListener('viewerready',()=>api.getCameraLookAt((error,camera)=>{
-              if(error||!camera)return;
-              const target=camera.target,position=camera.position,zoomOut=1.55;
-              const distant=position.map((value,index)=>target[index]+(value-target[index])*zoomOut);
-              api.setCameraLookAt(distant,target,1.4);
-            }));
-            api.start();
-          },
-          error:fallback
-        });
-      };
-      document.head.appendChild(script);
-    })();
-  </script>
-</b
+
+</body>
+</html>
